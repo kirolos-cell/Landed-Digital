@@ -250,12 +250,18 @@
     var card = document.querySelector("[data-nfc-card]");
     var screen = document.querySelector("[data-nfc-screen]");
     if (!card || !screen) return;
+    var idle = screen.nextElementSibling; // the "Tap to leave a review" idle prompt
     var stars = screen.querySelectorAll(".rev-stars span");
     function play() {
       screen.classList.add("show");
+      if (idle) idle.style.display = "none";
       stars.forEach(function (st, idx) { setTimeout(function () { st.classList.add("lit"); }, 350 + idx * 160); });
     }
-    function reset() { screen.classList.remove("show"); stars.forEach(function (s) { s.classList.remove("lit"); }); }
+    function reset() {
+      screen.classList.remove("show");
+      if (idle) idle.style.display = "flex";
+      stars.forEach(function (s) { s.classList.remove("lit"); });
+    }
     card.addEventListener("click", function () { screen.classList.contains("show") ? (reset(), setTimeout(play, 200)) : play(); });
     card.addEventListener("keydown", function (e) { if (e.key === "Enter" || e.key === " ") { e.preventDefault(); play(); } });
   }
