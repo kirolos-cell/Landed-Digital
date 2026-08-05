@@ -36,8 +36,8 @@ window.LANDED = {
     googleBusinessProfile: "",                    // [INSERT GBP LINK]
     // Analytics: set to activate. Left blank so nothing loads by default.
     gaId: "G-XX0T72Y7HT",                          // GA4 property for digital.landedgroupau.com
-    googleAdsId: "",                               // e.g. AW-XXXXXXXXX
-    adsConversionLabel: "",                        // e.g. AW-XXXX/xxxxxxxx
+    googleAdsId: "AW-18202148938",                 // Landed Group Ads account conversion ID
+    adsConversionLabel: "AW-18202148938/FrilCMSRnNwcEMqAu-dD",  // "Landed Digital - Free Review Setup" action
     metaPixelId: "",
   },
 
