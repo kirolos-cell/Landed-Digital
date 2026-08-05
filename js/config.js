@@ -35,7 +35,7 @@ window.LANDED = {
     bookingUrl: "",                               // e.g. Calendly / Cal.com URL
     googleBusinessProfile: "",                    // [INSERT GBP LINK]
     // Analytics: set to activate. Left blank so nothing loads by default.
-    gaId: "",                                      // GA4, e.g. G-XXXXXXX
+    gaId: "G-XX0T72Y7HT",                          // GA4 property for digital.landedgroupau.com
     googleAdsId: "",                               // e.g. AW-XXXXXXXXX
     adsConversionLabel: "",                        // e.g. AW-XXXX/xxxxxxxx
     metaPixelId: "",
