@@ -147,9 +147,11 @@ section { position: relative; }
 .brand { display: flex; align-items: center; gap: 11px; text-decoration: none; }
 .brand-mark { display: none; }
 .brand-text { display: flex; flex-direction: column; line-height: 1; }
-.brand-name { font-family: 'Outfit', sans-serif; font-weight: 700; font-size: 26px; letter-spacing: -0.01em; color: var(--green); text-transform: none; }
+.brand-name { font-family: 'Outfit', sans-serif; font-weight: 700; font-size: 38px; line-height: 1; letter-spacing: -0.015em; color: var(--green); text-transform: none; transition: font-size .35s var(--ease); }
 .brand-name .dot { color: var(--clay); }
-.brand-sub { font-size: 10px; font-weight: 500; letter-spacing: 0.34em; color: var(--green-2); text-transform: uppercase; margin-top: 4px; padding-left: 2px; }
+.brand-sub { font-size: 12.5px; font-weight: 600; letter-spacing: 0.42em; color: var(--green-2); text-transform: uppercase; margin-top: 5px; padding-left: 3px; }
+.nav.scrolled .brand-name { font-size: 30px; }
+@media (max-width: 680px) { .brand-name { font-size: 32px; } .brand-sub { font-size: 11px; } }
 
 .nav-links { display: flex; align-items: center; gap: 4px; list-style: none; }
 .nav-links > li > a {
