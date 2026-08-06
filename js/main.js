@@ -32,8 +32,7 @@
     mount.innerHTML =
       '<div class="nav-inner">' +
         '<a class="brand" href="index.html" aria-label="' + esc(C.business.name) + ' home">' +
-          MARK +
-          '<span class="brand-text"><span class="brand-name">Landed</span><span class="brand-sub">Digital</span></span>' +
+          '<span class="brand-text"><span class="brand-name">landed<span class="dot">.</span></span><span class="brand-sub">Digital</span></span>' +
         "</a>" +
         '<button class="hamburger" aria-label="Menu" aria-expanded="false" aria-controls="navlinks"><span></span><span></span><span></span></button>' +
         '<ul class="nav-links" id="navlinks">' + links +
@@ -89,7 +88,7 @@
       '<div class="wrap">' +
         '<div class="footer-top">' +
           '<div class="footer-brand">' +
-            '<span class="brand-text"><span class="brand-name">Landed Digital</span><span class="brand-sub">by ' + esc(b.parent) + "</span></span>" +
+            '<span class="brand-text"><span class="brand-name">landed<span class="dot">.</span></span><span class="brand-sub">Digital &middot; by ' + esc(b.parent) + "</span></span>" +
             '<p class="footer-pos">We make Australian businesses easier to find, easier to choose and easier to run. Google, reviews, websites and practical AI, under one point of contact.</p>' +
             '<div class="footer-cta-row">' +
               '<a class="btn btn-clay" href="' + C.cta.primary.href + '">' + esc(C.cta.primary.label) + "</a>" +

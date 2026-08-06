@@ -16,14 +16,14 @@
   --line:         #e3dbcd;   /* hairline */
   --line-strong:  #cfc5b2;
 
-  /* Forest green accent */
-  --green:        #1f4b3a;   /* deep forest */
+  /* Forest green accent (brand: #1D3D34) */
+  --green:        #1D3D34;   /* deep forest — brand primary */
   --green-2:      #2c6b4f;   /* interactive */
   --green-soft:   #e6efe6;   /* tint wash */
-  --green-ink:    #143026;
+  --green-ink:    #12261f;
 
-  /* Clay secondary (annotations, small accents) */
-  --clay:         #c05f3c;
+  /* Clay secondary (brand: #C15A3A) */
+  --clay:         #C15A3A;
   --clay-soft:    #f3e2d8;
 
   /* Dark section (footer / statements) */
@@ -145,10 +145,11 @@ section { position: relative; }
 .nav:has(.nav-links.open) { backdrop-filter: none; }
 
 .brand { display: flex; align-items: center; gap: 11px; text-decoration: none; }
-.brand-mark { width: 38px; height: 38px; flex-shrink: 0; }
+.brand-mark { display: none; }
 .brand-text { display: flex; flex-direction: column; line-height: 1; }
-.brand-name { font-family: 'Outfit', sans-serif; font-weight: 700; font-size: 19px; letter-spacing: 0.02em; color: var(--ink); text-transform: uppercase; }
-.brand-sub { font-size: 10px; font-weight: 500; letter-spacing: 0.28em; color: var(--green-2); text-transform: uppercase; margin-top: 4px; }
+.brand-name { font-family: 'Outfit', sans-serif; font-weight: 700; font-size: 26px; letter-spacing: -0.01em; color: var(--green); text-transform: none; }
+.brand-name .dot { color: var(--clay); }
+.brand-sub { font-size: 10px; font-weight: 500; letter-spacing: 0.34em; color: var(--green-2); text-transform: uppercase; margin-top: 4px; padding-left: 2px; }
 
 .nav-links { display: flex; align-items: center; gap: 4px; list-style: none; }
 .nav-links > li > a {
