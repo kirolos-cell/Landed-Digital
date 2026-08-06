@@ -126,8 +126,8 @@ window.LANDED = {
     {
       id: "foundation",
       name: "Google Foundation",
-      price: "From $690 setup",     // [PLACEHOLDER PRICING]
-      priceNote: "one-off, placeholder",
+      price: "Quoted up front",     // pricing hidden by design; quotes agreed before work starts
+      priceNote: "one-off setup, no lock-in",
       summary: "Everything your business needs to be found and trusted on Google. Website not included, it works with the site you already have.",
       cta: { label: "Build My Google Foundation", href: "contact.html?interest=Google%20Foundation" },
       for: ["New businesses", "Incomplete Google profiles", "Hard to find online", "Have a website already"],
@@ -147,8 +147,8 @@ window.LANDED = {
     {
       id: "review-engine",
       name: "Review Engine",
-      price: "From $290 setup",
-      priceNote: "placeholder, cards from",
+      price: "Start with a free setup",
+      priceNote: "then quoted up front",
       summary: "Turn happy customers into visible proof that your business delivers.",
       cta: { label: "Build My Review Engine", href: "reviews.html" },
       for: ["Barbers and salons", "Clinics and trades", "Mechanics", "Hospitality and retail", "Multi location"],
@@ -169,7 +169,7 @@ window.LANDED = {
     {
       id: "ai-office",
       name: "AI Office",
-      price: "Custom",
+      price: "Custom quote",
       priceNote: "scoped to your workflow",
       summary: "A practical AI support system built around the way your business already works.",
       cta: { label: "Explore AI Office", href: "ai-office.html" },
@@ -192,8 +192,8 @@ window.LANDED = {
     {
       id: "growth",
       name: "Growth Accelerator",
-      price: "From $890 / month",
-      priceNote: "placeholder retainer",
+      price: "Monthly, quoted up front",
+      priceNote: "no lock-in contracts",
       summary: "Ongoing support to improve visibility, enquiries and customer experience.",
       cta: { label: "Discuss Ongoing Growth", href: "contact.html?interest=Growth%20Accelerator" },
       for: ["Established businesses", "Ready to scale", "Multi location", "One partner across systems"],
