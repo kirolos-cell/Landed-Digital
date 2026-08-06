@@ -33,7 +33,8 @@ window.LANDED = {
     formspreeUrl: "https://formspree.io/f/xgoqddbl",
     // Optional. Leave blank to hide booking buttons until you have a link.
     bookingUrl: "",                               // e.g. Calendly / Cal.com URL
-    googleBusinessProfile: "",                    // [INSERT GBP LINK]
+    googleBusinessProfile: "https://g.page/r/Cb0AIJWv4lcjEAI",        // Landed Digital GBP
+    googleReviewLink: "https://g.page/r/Cb0AIJWv4lcjEAI/review",      // direct review link (also for our own NFC card)
     // Analytics: set to activate. Left blank so nothing loads by default.
     gaId: "G-XX0T72Y7HT",                          // GA4 property for digital.landedgroupau.com
     googleAdsId: "AW-18202148938",                 // Landed Group Ads account conversion ID
