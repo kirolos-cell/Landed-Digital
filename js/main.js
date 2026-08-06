@@ -108,7 +108,7 @@
           "</ul></div>" +
         "</div>" +
         '<div class="footer-bottom">' +
-          "<span>&copy; " + new Date().getFullYear() + " " + esc(b.parent) + ". Landed Digital. ABN " + esc(b.abn) + ".</span>" +
+          "<span>&copy; " + new Date().getFullYear() + " " + esc(b.parent) + ". Landed Digital. ABN " + esc(b.abn) + ". Landed Digital is an independent Australian business and is not affiliated with, or endorsed by, Google.</span>" +
           '<span class="footer-legal">' +
             '<a href="privacy.html">Privacy</a><a href="terms.html">Terms</a>' +
             '<a href="terms.html#nfc">NFC Offer Terms</a><a href="disclaimer.html">Disclaimer</a>' +
