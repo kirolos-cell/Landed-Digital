@@ -1,4 +1,50 @@
+# Landed Digital - https://digital.landedgroupau.com
+# Standard search crawlers
 User-agent: *
+Allow: /
+
+# AI and answer-engine crawlers explicitly welcomed, so this site can be
+# cited accurately in AI generated answers. See /llms.txt for a summary.
+User-agent: GPTBot
+Allow: /
+
+User-agent: OAI-SearchBot
+Allow: /
+
+User-agent: ChatGPT-User
+Allow: /
+
+User-agent: ClaudeBot
+Allow: /
+
+User-agent: Claude-Web
+Allow: /
+
+User-agent: anthropic-ai
+Allow: /
+
+User-agent: PerplexityBot
+Allow: /
+
+User-agent: Perplexity-User
+Allow: /
+
+User-agent: Google-Extended
+Allow: /
+
+User-agent: Applebot
+Allow: /
+
+User-agent: Applebot-Extended
+Allow: /
+
+User-agent: Bingbot
+Allow: /
+
+User-agent: cohere-ai
+Allow: /
+
+User-agent: meta-externalagent
 Allow: /
 
 Sitemap: https://digital.landedgroupau.com/sitemap.xml
