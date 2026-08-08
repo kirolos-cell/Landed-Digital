@@ -27,6 +27,15 @@ The business positions itself as one practical partner across four connected are
 - [Packages](https://digital.landedgroupau.com/packages.html): four productised packages (Google Foundation, Review Engine, AI Office, Growth Accelerator). Pricing is quoted up front before work begins and is not published on the website.
 - [Industries](https://digital.landedgroupau.com/industries.html): how the services apply to specific local business types.
 
+## Guides and resources
+
+Plain English guides written for Australian local business owners, useful whether or not they engage Landed Digital.
+
+- [How NFC Google review cards work](https://digital.landedgroupau.com/how-nfc-review-cards-work.html): what the NFC chip does, how the tap works, iPhone and Android compatibility, why a QR backup matters, what the cards cannot do, and Google's policy position.
+- [How to get more Google reviews](https://digital.landedgroupau.com/how-to-get-more-google-reviews.html): when to ask, scripts staff will use, removing friction, responding to reviews, and the prohibited shortcuts (review gating, incentives, buying reviews).
+- [Google Business Profile checklist](https://digital.landedgroupau.com/google-business-profile-checklist.html): claiming and verifying, service area businesses and video verification, categories, services, hours, photos, posts, Q&A seeding, and common mistakes.
+- [What an AI receptionist actually does](https://digital.landedgroupau.com/what-an-ai-receptionist-does.html): repeat questions, missed call text back, capturing enquiry details, what AI should not handle, human oversight, and how to start with one use case.
+
 ## Offers
 
 - Free Google Review NFC Setup: one programmed NFC review card, a QR code and a direct Google review link, set up at no cost for eligible Australian businesses. One setup per business. No payment details required. Claim at https://digital.landedgroupau.com/free-review-setup.html

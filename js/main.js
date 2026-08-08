@@ -99,7 +99,8 @@
           "<div><h5>Services</h5><ul>" + svcLinks.map(function (l) { return '<li><a href="' + l[1] + '">' + l[0] + "</a></li>"; }).join("") + "</ul></div>" +
           "<div><h5>Packages</h5><ul>" + pkgLinks.map(function (l) { return '<li><a href="' + l[0] + '">' + esc(l[1]) + "</a></li>"; }).join("") +
             '<li><a href="results.html">Results</a></li>' +
-            '<li><a href="industries.html">Industries</a></li></ul></div>' +
+            '<li><a href="industries.html">Industries</a></li>' +
+            '<li><a href="resources.html">Resources &amp; guides</a></li></ul></div>' +
           "<div><h5>Contact</h5><ul>" +
             '<li><a href="tel:' + b.phoneHref + '">' + esc(b.phone) + "</a></li>" +
             '<li><a href="mailto:' + b.email + '">' + esc(b.email) + "</a></li>" +
