@@ -16,7 +16,7 @@
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@400;500;600;700;800&family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
-<link rel="stylesheet" href="css/styles.css?v=5">
+<link rel="stylesheet" href="css/styles.css?v=6">
 <script type="application/ld+json">
 { "@context":"https://schema.org","@type":"BreadcrumbList","itemListElement":[
   {"@type":"ListItem","position":1,"name":"Home","item":"https://digital.landedgroupau.com/"},
@@ -53,13 +53,13 @@
               <div class="hp" aria-hidden="true"><label>Leave this empty <input type="text" name="_gotcha" tabindex="-1" autocomplete="off"></label></div>
 
               <div class="form-row">
-                <div class="field"><label for="name">Your name <span class="req">*</span></label><input id="name" name="name" type="text" required autocomplete="name"><span class="err">Please enter your name.</span></div>
-                <div class="field"><label for="business">Business name <span class="req">*</span></label><input id="business" name="business_name" type="text" required autocomplete="organization"><span class="err">Please enter your business name.</span></div>
+                <div class="field"><label for="name">Your name <span class="req" aria-hidden="true">*</span></label><input id="name" name="name" type="text" required autocomplete="name" aria-describedby="name-err"><span class="err" id="name-err" role="alert">Please enter your name.</span></div>
+                <div class="field"><label for="business">Business name <span class="req" aria-hidden="true">*</span></label><input id="business" name="business_name" type="text" required autocomplete="organization" aria-describedby="business-err"><span class="err" id="business-err" role="alert">Please enter your business name.</span></div>
               </div>
 
               <div class="form-row">
-                <div class="field"><label for="email">Email <span class="req">*</span></label><input id="email" name="email" type="email" required autocomplete="email"><span class="err">Please enter a valid email.</span></div>
-                <div class="field"><label for="phone">Phone <span class="req">*</span></label><input id="phone" name="phone" type="tel" required autocomplete="tel"><span class="err">Please enter a contact number.</span></div>
+                <div class="field"><label for="email">Email <span class="req" aria-hidden="true">*</span></label><input id="email" name="email" type="email" required autocomplete="email" inputmode="email" aria-describedby="email-err"><span class="err" id="email-err" role="alert">Please enter a valid email.</span></div>
+                <div class="field"><label for="phone">Phone <span class="req" aria-hidden="true">*</span></label><input id="phone" name="phone" type="tel" required autocomplete="tel" inputmode="tel" aria-describedby="phone-err"><span class="err" id="phone-err" role="alert">Please enter a contact number.</span></div>
               </div>
 
               <div class="form-row">
@@ -97,16 +97,18 @@
                 </div>
               </div>
 
-              <div class="field"><label for="challenge">What is the main thing you would like to improve? <span class="req">*</span></label><textarea id="challenge" name="current_challenge" required placeholder="For example: not enough reviews, missing calls, hard to find on Google..."></textarea><span class="err">A quick line here helps us give you a useful answer.</span></div>
+              <div class="field"><label for="challenge">What is the main thing you would like to improve? <span class="req" aria-hidden="true">*</span></label><textarea id="challenge" name="current_challenge" required placeholder="For example: not enough reviews, missing calls, hard to find on Google..." aria-describedby="challenge-err"></textarea><span class="err" id="challenge-err" role="alert">A quick line here helps us give you a useful answer.</span></div>
 
-              <div class="field"><label>Would you like to</label>
+              <fieldset class="field opt-set">
+                <legend>Would you like to</legend>
                 <div class="chips" style="gap:10px;margin-top:4px">
-                  <label class="chip" style="cursor:pointer;display:flex;gap:8px;align-items:center"><input type="checkbox" name="wants_free_nfc" value="Yes" style="accent-color:var(--green)"> Claim the free NFC review setup</label>
-                  <label class="chip" style="cursor:pointer;display:flex;gap:8px;align-items:center"><input type="checkbox" name="wants_business_check" value="Yes" style="accent-color:var(--green)"> Book a free business check</label>
+                  <label class="chip opt-chip"><input type="checkbox" name="wants_free_nfc" value="Yes"> Claim the free NFC review setup</label>
+                  <label class="chip opt-chip"><input type="checkbox" name="wants_business_check" value="Yes"> Book a free business check</label>
                 </div>
-              </div>
+              </fieldset>
 
-              <label class="consent"><input type="checkbox" required name="consent" value="Yes"> <span>I am happy for Landed Digital to contact me about my enquiry. See our <a href="privacy.html" style="color:var(--green-2)">Privacy Policy</a>.</span></label>
+              <label class="consent"><input type="checkbox" required name="consent" value="Yes" aria-describedby="consent-err"> <span>I am happy for Landed Digital to contact me about my enquiry. See our <a href="privacy.html">Privacy Policy</a>.</span></label>
+              <span class="err" id="consent-err" role="alert" style="margin:-14px 0 18px">Please tick this so we can get back to you.</span>
 
               <button type="submit" class="btn btn-primary btn-lg btn-block">Send enquiry</button>
               <p class="field-hint center" style="margin-top:12px">We usually reply within one business day.</p>
@@ -152,7 +154,7 @@
 <footer data-footer></footer>
 <div data-mcta></div>
 <script src="js/config.js?v=3"></script>
-<script src="js/main.js?v=5"></script>
+<script src="js/main.js?v=6"></script>
 <script>
   // Show booking card only if a booking URL is configured.
   (function(){ var b = (window.LANDED&&window.LANDED.integrations&&window.LANDED.integrations.bookingUrl)||""; if(b){ var card=document.querySelector('[data-booking-card]'); var link=document.querySelector('[data-booking-link]'); if(card){card.style.display='block';} if(link){link.href=b;} } })();

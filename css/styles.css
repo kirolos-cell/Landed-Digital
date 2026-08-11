@@ -167,7 +167,7 @@ section { position: relative; }
 }
 .nav-offer:hover { background: var(--green-2) !important; }
 
-.hamburger { display: none; flex-direction: column; gap: 5px; cursor: pointer; padding: 10px; background: none; border: none; z-index: 110; }
+.hamburger { display: none; flex-direction: column; justify-content: center; align-items: center; gap: 5px; cursor: pointer; padding: 14px; min-width: 44px; min-height: 44px; background: none; border: none; z-index: 110; }
 .hamburger span { width: 26px; height: 2px; background: var(--ink); border-radius: 2px; transition: transform .3s, opacity .3s; display: block; }
 .hamburger.open span:nth-child(1) { transform: translateY(7px) rotate(45deg); }
 .hamburger.open span:nth-child(2) { opacity: 0; }
@@ -356,11 +356,27 @@ section { position: relative; }
 .field textarea { resize: vertical; min-height: 110px; }
 .field input:focus, .field select:focus, .field textarea:focus { outline: none; border-color: var(--green-2); box-shadow: 0 0 0 3px var(--green-soft); }
 .field input:user-invalid, .field select:user-invalid, .field textarea:user-invalid { border-color: var(--clay); }
-.field .err { display: none; color: var(--clay); font-size: 13px; margin-top: 6px; }
-.field.show-err .err { display: block; }
+.err { display: none; color: #A8442A; font-size: 13.5px; font-weight: 500; margin-top: 6px; }
+.field.show-err .err, .err.show-err { display: block; }
+.field.show-err input, .field.show-err select, .field.show-err textarea { border-color: var(--clay); }
 .field-hint { font-size: 12.5px; color: var(--ink-faint); margin-top: 6px; }
-.consent { display: flex; gap: 12px; align-items: flex-start; font-size: 13.5px; color: var(--ink-soft); margin: 6px 0 22px; }
-.consent input { width: 18px; height: 18px; margin-top: 2px; flex-shrink: 0; accent-color: var(--green); }
+/* Consent: large touch target (min 44px) and clear focus */
+.consent { display: flex; gap: 12px; align-items: flex-start; font-size: 14px; line-height: 1.55; color: var(--ink-soft); margin: 6px 0 22px; cursor: pointer; padding: 8px 0; min-height: 44px; }
+.consent input { width: 24px; height: 24px; margin-top: 1px; flex-shrink: 0; accent-color: var(--green); cursor: pointer; }
+.consent a { color: var(--green-2); font-weight: 500; }
+
+/* Optional checkbox chips: real touch targets, visible checked state */
+.opt-set { border: none; padding: 0; margin: 0 0 18px; }
+.opt-set legend { font-family: 'Outfit', sans-serif; font-weight: 500; font-size: 14px; color: var(--ink); padding: 0; margin-bottom: 7px; }
+.opt-chip { cursor: pointer; display: flex; gap: 10px; align-items: center; min-height: 44px; padding: 10px 16px; transition: border-color .2s, background .2s; }
+.opt-chip input { width: 22px; height: 22px; accent-color: var(--green); cursor: pointer; flex-shrink: 0; }
+.opt-chip:has(input:checked) { border-color: var(--green); background: var(--green-soft); }
+.opt-chip:focus-within { outline: 2px solid var(--green-2); outline-offset: 2px; }
+
+/* "Rather just call?" fallback under a form */
+.call-alt { text-align: center; margin-top: 18px; font-size: 15.5px; color: var(--ink-soft); }
+.call-alt a { display: inline-block; color: var(--green); font-family: 'Outfit', sans-serif; font-weight: 700; text-decoration: none; padding: 6px 4px; border-bottom: 2px solid var(--green-soft); }
+.call-alt a:hover { border-bottom-color: var(--green); }
 .hp { position: absolute; left: -9999px; width: 1px; height: 1px; overflow: hidden; }
 
 /* Form success state */

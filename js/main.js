@@ -173,10 +173,21 @@
 
       form.addEventListener("submit", function (e) {
         e.preventDefault();
-        // native validation
+        // native validation, with accessible error state
         if (!form.checkValidity()) {
-          form.querySelectorAll(":invalid").forEach(function (f) { var wrap = f.closest(".field"); if (wrap) wrap.classList.add("show-err"); });
-          var firstInvalid = form.querySelector(":invalid"); if (firstInvalid) firstInvalid.focus();
+          form.querySelectorAll(":invalid").forEach(function (f) {
+            var wrap = f.closest(".field");
+            if (wrap) wrap.classList.add("show-err");
+            f.setAttribute("aria-invalid", "true");
+            // standalone error (e.g. the consent checkbox, which sits outside .field)
+            var described = f.getAttribute("aria-describedby");
+            if (described) {
+              var msg = document.getElementById(described);
+              if (msg && !msg.closest(".field")) msg.classList.add("show-err");
+            }
+          });
+          var firstInvalid = form.querySelector(":invalid");
+          if (firstInvalid) firstInvalid.focus();
           return;
         }
         // honeypot
@@ -212,9 +223,21 @@
           });
       });
 
-      // clear error state on input
+      // clear error state as soon as the field becomes valid again
       form.querySelectorAll("input, select, textarea").forEach(function (f) {
-        f.addEventListener("input", function () { var w = f.closest(".field"); if (w) w.classList.remove("show-err"); });
+        var clear = function () {
+          if (!f.checkValidity()) return;
+          var w = f.closest(".field");
+          if (w) w.classList.remove("show-err");
+          f.removeAttribute("aria-invalid");
+          var described = f.getAttribute("aria-describedby");
+          if (described) {
+            var msg = document.getElementById(described);
+            if (msg) msg.classList.remove("show-err");
+          }
+        };
+        f.addEventListener("input", clear);
+        f.addEventListener("change", clear);
       });
     });
   }
