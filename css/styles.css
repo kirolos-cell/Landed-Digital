@@ -490,6 +490,12 @@ form.sent { display: none; }
 .counter-wrap { display: flex; align-items: baseline; gap: 12px; }
 .counter { font-family: 'Outfit'; font-weight: 700; font-size: clamp(48px, 8vw, 90px); color: var(--green); letter-spacing: -0.03em; line-height: 1; }
 
+/* Real screenshot frame (actual client Google listings) */
+.shot-wrap { max-width: 420px; }
+.shot-label { display: inline-flex; align-items: center; gap: 7px; font-family: 'Outfit', sans-serif; font-size: 12px; font-weight: 600; letter-spacing: .1em; text-transform: uppercase; color: var(--green-2); margin-bottom: 10px; }
+.shot-label::before { content: ""; width: 8px; height: 8px; border-radius: 50%; background: var(--clay); }
+.shot { display: block; width: 100%; height: auto; border-radius: 14px; border: 1px solid var(--line); box-shadow: var(--shadow-md); background: #fff; }
+
 /* Google Business Profile card (legally-safe representation, real client data) */
 .gbp { background: #fff; border: 1px solid var(--line); border-radius: 14px; overflow: hidden; box-shadow: var(--shadow-md); max-width: 400px; }
 .gbp-map { height: 116px; position: relative; background: #e6efe6; }
