@@ -373,6 +373,23 @@ section { position: relative; }
 .opt-chip:has(input:checked) { border-color: var(--green); background: var(--green-soft); }
 .opt-chip:focus-within { outline: 2px solid var(--green-2); outline-offset: 2px; }
 
+/* ===== HERO CHECK WIDGET ================================================== */
+.hero-check-wrap { max-width: 460px; width: 100%; }
+.hero-check { padding: 30px 30px 26px; border-top: 4px solid var(--green); }
+.hc-title { font-size: 23px; line-height: 1.25; margin-bottom: 8px; }
+.hc-sub { font-size: 14.5px; color: var(--ink-soft); margin-bottom: 20px; }
+.hc-row { display: flex; gap: 10px; }
+.hc-row input { flex: 1; min-width: 0; }
+.hc-go { white-space: nowrap; padding: 13px 18px; font-size: 14.5px; }
+.hc-more { display: none; }
+.hc-more.open { display: block; animation: pop .45s var(--ease); }
+.hero-check.expanded .hc-go { display: none; }
+@media (max-width: 480px) {
+  .hc-row { flex-direction: column; }
+  .hc-go { width: 100%; }
+  .hero-check { padding: 24px 20px 20px; }
+}
+
 /* "Rather just call?" fallback under a form */
 .call-alt { text-align: center; margin-top: 18px; font-size: 15.5px; color: var(--ink-soft); }
 .call-alt a { display: inline-block; color: var(--green); font-family: 'Outfit', sans-serif; font-weight: 700; text-decoration: none; padding: 6px 4px; border-bottom: 2px solid var(--green-soft); }

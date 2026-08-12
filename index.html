@@ -27,7 +27,7 @@
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@400;500;600;700;800&family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
-<link rel="stylesheet" href="css/styles.css?v=6">
+<link rel="stylesheet" href="css/styles.css?v=7">
 
 <!-- Structured data: LocalBusiness -->
 <script type="application/ld+json">
@@ -104,45 +104,65 @@
         <div class="hero-copy reveal in">
           <span class="eyebrow hero-eyebrow">Melbourne based &middot; Serving Australia</span>
           <h1>
-            <span class="ln">Get found on Google.</span>
-            <span class="ln ink-green">Build trust.</span>
-            <span class="ln">Save time with <span class="serif ink-clay">AI</span>.</span>
+            <span class="ln">We get Melbourne businesses</span>
+            <span class="ln ink-green">found on Google</span>
+            <span class="ln">and bring in more reviews.</span>
           </h1>
-          <p class="hero-sub">We help Australian businesses improve their Google presence, generate more reviews, build better websites and use practical AI to handle repetitive work.</p>
-          <div class="hero-actions">
-            <a class="btn btn-primary btn-lg btn-arrow" href="free-review-setup.html">Claim Your Free Review Setup</a>
-            <a class="btn btn-ghost btn-lg" href="contact.html#business-check">Book a Free Business Check</a>
-          </div>
+          <p class="hero-sub">Google Business Profiles, tap to review cards, websites and practical AI. One partner, one point of contact, no lock-in.</p>
           <p class="hero-micro">We make your business <span class="hero-rotator" data-rotator>easier to find</span>.</p>
+          <p class="hero-micro" style="margin-top:10px">Prefer to start with the free review card? <a href="free-review-setup.html" style="color:var(--green-2);font-weight:600">Claim your free setup</a>.</p>
         </div>
 
-        <!-- Hero visual: NFC tap demo -->
+        <!-- Hero: check-your-business widget -->
         <div class="hero-visual reveal in">
-          <div class="nfc-demo">
-            <span class="label-example">Interactive demo &middot; tap the card</span>
-            <div class="phone">
-              <div class="phone-notch"></div>
-              <div class="phone-screen">
-                <div class="rev-screen" data-nfc-screen>
-                  <div class="rev-logo">G</div>
-                  <div class="rev-biz">Your Business</div>
-                  <div class="rev-sub">Google review</div>
-                  <div class="rev-stars"><span>&#9733;</span><span>&#9733;</span><span>&#9733;</span><span>&#9733;</span><span>&#9733;</span></div>
-                  <div class="rev-box">Great service, quick and friendly...</div>
-                  <button class="rev-post" type="button">Post</button>
+          <div class="hero-check-wrap">
+            <div class="form-card hero-check">
+              <h2 class="hc-title">How does your business look on Google right now?</h2>
+              <p class="hc-sub">Free check by a real person. We look at your profile, reviews and website, then tell you the one thing worth fixing first.</p>
+              <form data-formspree data-conversion="business-check" novalidate>
+                <input type="hidden" name="_subject" value="Free business check request - Landed Digital">
+                <input type="hidden" name="source" value="Homepage hero check">
+                <div class="hp" aria-hidden="true"><label>Leave this empty <input type="text" name="_gotcha" tabindex="-1" autocomplete="off"></label></div>
+
+                <div class="field">
+                  <label for="hc-biz">Your business name <span class="req" aria-hidden="true">*</span></label>
+                  <div class="hc-row">
+                    <input id="hc-biz" name="business_name" type="text" required autocomplete="organization" placeholder="e.g. The Golden Fade" aria-describedby="hc-biz-err">
+                    <button type="button" class="btn btn-primary hc-go" data-hc-go>Check my business</button>
+                  </div>
+                  <span class="err" id="hc-biz-err" role="alert">Please enter your business name.</span>
                 </div>
-                <div style="position:absolute;inset:0;display:flex;flex-direction:column;align-items:center;justify-content:center;gap:14px;padding:24px;text-align:center;">
-                  <div style="font-family:'Outfit';font-weight:600;color:var(--ink);font-size:15px;">Tap to leave a review</div>
-                  <div style="font-size:12px;color:var(--ink-faint);">Hold your phone near the card</div>
+
+                <div class="hc-more" data-hc-more>
+                  <div class="field">
+                    <label for="hc-focus">What would you like to improve?</label>
+                    <select id="hc-focus" name="service_interest">
+                      <option value="">Pick the closest</option>
+                      <option>Getting found on Google</option>
+                      <option>Getting more reviews</option>
+                      <option>A better website</option>
+                      <option>Missing calls and enquiries</option>
+                      <option>Not sure yet</option>
+                    </select>
+                  </div>
+                  <div class="form-row">
+                    <div class="field"><label for="hc-name">Your name <span class="req" aria-hidden="true">*</span></label><input id="hc-name" name="name" type="text" required autocomplete="name" aria-describedby="hc-name-err"><span class="err" id="hc-name-err" role="alert">Please enter your name.</span></div>
+                    <div class="field"><label for="hc-phone">Phone <span class="req" aria-hidden="true">*</span></label><input id="hc-phone" name="phone" type="tel" required autocomplete="tel" inputmode="tel" aria-describedby="hc-phone-err"><span class="err" id="hc-phone-err" role="alert">Please enter a contact number.</span></div>
+                  </div>
+                  <div class="field"><label for="hc-email">Email <span class="req" aria-hidden="true">*</span></label><input id="hc-email" name="email" type="email" required autocomplete="email" inputmode="email" aria-describedby="hc-email-err"><span class="err" id="hc-email-err" role="alert">Please enter a valid email.</span></div>
+                  <label class="consent"><input type="checkbox" required name="consent" value="Yes" aria-describedby="hc-consent-err"> <span>I am happy for Landed Digital to contact me about my check. See our <a href="privacy.html">Privacy Policy</a>.</span></label>
+                  <span class="err" id="hc-consent-err" role="alert" style="margin:-14px 0 16px">Please tick this so we can get back to you.</span>
+                  <button type="submit" class="btn btn-clay btn-lg btn-block">Get my free check</button>
+                  <p class="field-hint center" style="margin-top:10px">No cost, no obligation. Landed Digital is an independent service provider, not affiliated with Google.</p>
                 </div>
-              </div>
+              </form>
             </div>
-            <div class="nfc-card" data-nfc-card tabindex="0" role="button" aria-label="Demonstration NFC review card, tap to preview">
-              <svg class="nfc-wave" width="26" height="26" viewBox="0 0 24 24" fill="none" stroke="rgba(255,255,255,0.8)" stroke-width="1.6"><path d="M6 8a8 8 0 0 1 0 8"/><path d="M9.5 6a12 12 0 0 1 0 12"/><path d="M13 4.5a16 16 0 0 1 0 15"/></svg>
-              <div class="nfc-brand">Review us on Google</div>
-              <div class="nfc-tap">Tap &middot; or scan the QR</div>
+            <div class="form-success">
+              <div class="success-check"><svg viewBox="0 0 24 24" fill="none" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="M20 6 9 17l-5-5"/></svg></div>
+              <h3>Thanks, we have got it.</h3>
+              <p>The team will take a proper look and be in touch to discuss. If it is urgent, call <span data-fill="phone"></span> and we will usually get back to you within the hour.</p>
             </div>
-            <p class="nfc-hint">Customers tap, land on your review page, done.</p>
+            <p class="call-alt">Would rather just talk? Call <a href="tel:+61403385125">0403 385 125</a></p>
           </div>
         </div>
       </div>
@@ -528,6 +548,6 @@
 <footer data-footer></footer>
 <div data-mcta></div>
 <script src="js/config.js?v=3"></script>
-<script src="js/main.js?v=6"></script>
+<script src="js/main.js?v=7"></script>
 </body>
 </html>

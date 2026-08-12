@@ -361,6 +361,35 @@
     });
   }
 
+  /* ---- Hero check widget: expand step 2 after business name -------------- */
+  function initHeroCheck() {
+    var card = document.querySelector(".hero-check");
+    if (!card) return;
+    var go = card.querySelector("[data-hc-go]");
+    var more = card.querySelector("[data-hc-more]");
+    var biz = card.querySelector("#hc-biz");
+    if (!go || !more || !biz) return;
+
+    function expand() {
+      if (!biz.checkValidity()) {
+        biz.closest(".field").classList.add("show-err");
+        biz.setAttribute("aria-invalid", "true");
+        biz.focus();
+        return;
+      }
+      more.classList.add("open");
+      card.classList.add("expanded");
+      var focusTarget = more.querySelector("select, input");
+      if (focusTarget) focusTarget.focus();
+    }
+
+    go.addEventListener("click", expand);
+    // Enter in the business field expands instead of submitting a half-empty form
+    biz.addEventListener("keydown", function (e) {
+      if (e.key === "Enter" && !more.classList.contains("open")) { e.preventDefault(); expand(); }
+    });
+  }
+
   /* ---- Pathway diagram hover cycle --------------------------------------- */
   function initPathway() {
     var nodes = document.querySelectorAll(".pathway .path-node");
@@ -393,7 +422,7 @@
   document.addEventListener("DOMContentLoaded", function () {
     renderNav(); renderMobileCta(); renderFooter();
     fillTokens(); prefillFromQuery();
-    initReveal(); initRotator(); initForms(); initAnalytics();
+    initReveal(); initRotator(); initForms(); initAnalytics(); initHeroCheck();
     initNfcDemo(); initChatDemo(); initSearchDemo(); initCounter(); initPathway();
   });
 })();
